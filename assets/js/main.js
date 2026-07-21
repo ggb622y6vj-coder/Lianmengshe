@@ -9,14 +9,6 @@
     image.addEventListener('error', () => image.parentElement.classList.add('image-missing'));
   });
 
-  const updateBackground = () => {
-    const progress = Math.min(window.scrollY / 400, 1);
-    document.documentElement.style.setProperty('--bg-brightness', String(1 - progress * 0.65));
-    document.documentElement.style.setProperty('--bg-blur', `${progress * 8}px`);
-  };
-  updateBackground();
-  window.addEventListener('scroll', updateBackground, { passive: true });
-
   const revealItems = document.querySelectorAll('.reveal');
   if (reducedMotion || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
