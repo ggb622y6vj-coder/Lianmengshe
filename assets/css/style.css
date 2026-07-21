@@ -2,15 +2,15 @@
 
 *{box-sizing:border-box}
 html{background:#080719;color-scheme:dark;scroll-behavior:smooth}
-body{margin:0;min-width:0;overflow-x:hidden;color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.8;background:#080719}
+body{min-height:100vh;margin:0;min-width:0;overflow-x:hidden;color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.8;background:transparent;isolation:isolate}
 a{color:inherit}
 button{font:inherit}
-.background{position:fixed;inset:-64px;z-index:-2;background-color:#171621;background-position:center;background-size:cover;transform:scale(1.08);filter:blur(32px);will-change:transform}
+.background{position:fixed;inset:-64px;z-index:0;pointer-events:none;background-color:#171621;background-position:center;background-size:cover;transform:scale(1.08);filter:blur(32px);will-change:transform}
 .background::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.56)}
 .site-header{position:fixed;top:0;right:0;z-index:20;height:100px;width:min(330px,65vw);display:flex;align-items:center;justify-content:flex-end;padding-right:clamp(20px,4vw,58px)}
 .header-blur{position:absolute;inset:0;background:linear-gradient(270deg,rgba(11,9,32,.58),rgba(11,9,32,0));backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);mask-image:linear-gradient(270deg,#000 45%,transparent);-webkit-mask-image:linear-gradient(270deg,#000 45%,transparent);pointer-events:none}
 .logo{position:relative;text-decoration:none;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1rem,2vw,1.35rem);font-weight:600;letter-spacing:.24em;text-shadow:0 0 22px rgba(199,184,255,.45)}
-.page{width:min(var(--max),calc(100% - 64px));margin:0 auto;padding:128px 0 120px;opacity:0;animation:pageIn .4s ease forwards}
+.page{position:relative;z-index:1;width:min(var(--max),calc(100% - 64px));margin:0 auto;padding:128px 0 120px;opacity:0;animation:pageIn .4s ease forwards}
 .page-home{min-height:calc(100vh - 70px);display:flex;flex-direction:column;justify-content:center}
 .eyebrow{margin:0 0 10px;color:var(--accent);font:600 .72rem/1.5 Georgia,serif;letter-spacing:.24em;text-transform:uppercase}
 .works h1,.section-heading h2{margin:0 0 36px;font:400 clamp(2.2rem,6vw,4.8rem)/1.05 Georgia,"Yu Mincho",serif;letter-spacing:.04em}
@@ -57,7 +57,7 @@ button{font:inherit}
 .lyric-ja{font-size:1rem;line-height:2}
 .lyric-zh{margin-top:48px;padding-top:40px;border-top:1px solid var(--line);color:#d0ccda;font-size:.91rem;line-height:2}
 .lyric-ja p,.lyric-zh p{margin:0 0 2em}
-.site-footer{position:relative;min-height:90px;display:flex;align-items:center;justify-content:center;padding:30px 20px;overflow:hidden}
+.site-footer{position:relative;z-index:1;min-height:90px;display:flex;align-items:center;justify-content:center;padding:30px 20px;overflow:hidden}
 .footer-blur{position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,7,29,.82),rgba(9,7,29,0));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);mask-image:linear-gradient(0deg,#000,transparent);-webkit-mask-image:linear-gradient(0deg,#000,transparent);pointer-events:none}
 .site-footer p{position:relative;margin:0;color:#aaa5b9;text-align:center;font:400 .68rem/1.5 Georgia,serif;letter-spacing:.08em}
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s var(--ease)}
