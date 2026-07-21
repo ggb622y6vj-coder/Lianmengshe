@@ -1,4 +1,6 @@
-:root{--ink:#f4f1ff;--muted:#b9b5cc;--line:rgba(238,232,255,.22);--panel:rgba(8,7,27,.72);--accent:#c7b8ff;--max:1080px;--ease:cubic-bezier(.2,.75,.25,1)}
+:root{--ink:#f4f1ff;--muted:#b9b5cc;--line:rgba(238,232,255,.22);--panel:rgba(8,7,27,.72);--accent:#c7b8ff;--glow-rgb:126,105,215;--open-bg:rgba(25,20,57,.75);--max:1080px;--ease:cubic-bezier(.2,.75,.25,1)}
+.theme-jigoku{--accent:#d2c7e5;--muted:#bdb4ce;--line:rgba(210,199,229,.27);--panel:rgba(5,6,28,.76);--glow-rgb:155,136,195;--open-bg:rgba(17,15,57,.78)}
+.theme-natsushine{--accent:#dfb3a9;--muted:#b9c8cb;--line:rgba(197,221,220,.27);--panel:rgba(6,22,27,.76);--glow-rgb:216,149,132;--open-bg:rgba(18,48,55,.78)}
 
 *{box-sizing:border-box}
 html{background:#080719;color-scheme:dark;scroll-behavior:smooth}
@@ -16,7 +18,7 @@ button{font:inherit}
 .works h1,.section-heading h2{margin:0 0 36px;font:400 clamp(2.2rem,6vw,4.8rem)/1.05 Georgia,"Yu Mincho",serif;letter-spacing:.04em}
 .album-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:28px}
 .album-card{display:block;max-width:430px;padding:14px;text-decoration:none;border:1px solid var(--line);background:rgba(6,5,24,.55);backdrop-filter:blur(12px);transition:transform .28s var(--ease),border-color .28s,box-shadow .28s}
-.album-card:hover,.album-card:focus-visible,.link-button:hover,.link-button:focus-visible,.track-toggle:hover,.track-toggle:focus-visible{transform:scale(1.02);border-color:rgba(210,198,255,.72);box-shadow:0 0 28px rgba(126,105,215,.22)}
+.album-card:hover,.album-card:focus-visible,.link-button:hover,.link-button:focus-visible,.track-toggle:hover,.track-toggle:focus-visible{transform:scale(1.02);border-color:var(--accent);box-shadow:0 0 28px rgba(var(--glow-rgb),.24)}
 .artwork-wrap{display:block;aspect-ratio:1;background:#686868;overflow:hidden}
 .artwork-wrap img{display:block;width:100%;height:100%;object-fit:cover}
 .artwork-wrap.image-missing img{display:none}
@@ -28,17 +30,17 @@ button{font:inherit}
 .link-button{display:inline-flex;align-items:center;justify-content:space-between;gap:40px;min-width:230px;padding:13px 17px;text-decoration:none;border:1px solid var(--line);background:rgba(6,5,24,.58);font-size:.82rem;letter-spacing:.1em;backdrop-filter:blur(10px);transition:transform .28s var(--ease),border-color .28s,box-shadow .28s}
 .album-hero{text-align:center;max-width:700px;margin:0 auto 115px}
 .hero-artwork{width:min(470px,72vw);margin:0 auto 42px;box-shadow:0 35px 85px rgba(0,0,0,.42)}
-.album-hero h1{margin:0;font:400 clamp(2rem,5vw,4rem)/1.28 Georgia,"Yu Mincho",serif;letter-spacing:.06em}
+.album-hero h1{margin:0;color:var(--accent);font:400 clamp(2rem,5vw,4rem)/1.28 Georgia,"Yu Mincho",serif;letter-spacing:.06em}
 .translated-title{margin:10px 0 22px;color:#d0cada;font-size:clamp(.9rem,2vw,1.12rem);letter-spacing:.06em}
 .album-meta{display:flex;justify-content:center;gap:30px;margin:0 0 28px;color:var(--muted);font-size:.84rem;letter-spacing:.1em}
 .track-section{max-width:900px;margin:0 auto}
 .section-heading{margin-bottom:24px}
-.section-heading h2{margin-bottom:0}
+.section-heading h2{margin-bottom:0;color:var(--accent)}
 .track-list{border-top:1px solid var(--line)}
 .track{border-bottom:1px solid var(--line)}
 .track-toggle,.track-static{width:100%;min-height:92px;display:grid;grid-template-columns:42px 1fr auto 24px;align-items:center;gap:18px;padding:16px 18px;color:var(--ink);text-align:left;border:1px solid transparent;background:rgba(7,6,25,.44)}
 .track-toggle{cursor:pointer;transition:transform .28s var(--ease),border-color .28s,box-shadow .28s,background .28s}
-.track-toggle[aria-expanded=true]{background:rgba(25,20,57,.75);border-color:rgba(199,184,255,.36)}
+.track-toggle[aria-expanded=true]{background:var(--open-bg);border-color:var(--accent)}
 .track-no,.track-time{color:var(--muted);font:400 .76rem/1.2 Georgia,serif;letter-spacing:.08em}
 .track-name{display:grid}
 .track-name strong{font:400 clamp(1rem,2vw,1.18rem)/1.5 Georgia,"Yu Mincho",serif}
