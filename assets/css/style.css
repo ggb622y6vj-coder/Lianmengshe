@@ -1,6 +1,7 @@
 :root{--ink:#f4f1ff;--muted:#b9b5cc;--line:rgba(238,232,255,.22);--panel:rgba(8,7,27,.72);--accent:#c7b8ff;--glow-rgb:126,105,215;--open-bg:rgba(25,20,57,.75);--max:1080px;--ease:cubic-bezier(.2,.75,.25,1)}
 .theme-jigoku{--accent:#d2c7e5;--muted:#bdb4ce;--line:rgba(210,199,229,.27);--panel:rgba(5,6,28,.76);--glow-rgb:155,136,195;--open-bg:rgba(17,15,57,.78)}
 .theme-natsushine{--accent:#dfb3a9;--muted:#b9c8cb;--line:rgba(197,221,220,.27);--panel:rgba(6,22,27,.76);--glow-rgb:216,149,132;--open-bg:rgba(18,48,55,.78)}
+.theme-juvenile{--accent:#c8d8ee;--muted:#c6bbb0;--line:rgba(200,216,238,.29);--panel:rgba(18,19,24,.78);--glow-rgb:171,194,225;--open-bg:rgba(48,45,48,.82)}
 
 *{box-sizing:border-box}
 html{background:#080719;color-scheme:dark;scroll-behavior:smooth}
